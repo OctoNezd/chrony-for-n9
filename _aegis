@@ -1,0 +1,8 @@
+<aegis>
+  <provide> 
+  </provide>
+  <request>
+    <credential name="CAP::sys_time"/>
+    <for path="/usr/bin/chronyd" />
+  </request>
+</aegis>
