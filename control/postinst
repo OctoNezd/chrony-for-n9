@@ -1,2 +1,6 @@
 #!/bin/sh
-if [ ! -f /etc/chronyd.conf ]; then cp /etc/chrony.conf.sample /etc/chrony.conf; fi 
+if [ ! -f /etc/chronyd.conf ]; then
+    dbus-send --print-reply --dest=com.meego.core.MNotificationManager /notificationmanager com.meego.core.MNotificationManager.addNotification uint32:1000 uint32:0 string:'x-nokia.internet' string:"" string:"Chrony config doesn't exist - copying example and starting Chrony." string:'' string:'' uint32:0
+    cp /etc/chrony.conf.sample /etc/chrony.conf 
+    /sbin/initctl start chrony
+fi 

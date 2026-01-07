@@ -1,7 +1,7 @@
 Package: chrony
-Version: 1.0
+Version: 4.7
 Section: user/other
 Priority: optional
 Architecture: all
 Maintainer: Yan <me@octonezd.me>
-Description: Package for chrony
+Description: Package for chrony time sync daemon
