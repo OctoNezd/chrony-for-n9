@@ -7,6 +7,7 @@ cd _pkg
 ../../create_digsums.sh | tee DEBIAN/digsigsums
 cd $ROOT
 cp -r control/* _pkg/DEBIAN
+ls -lahR _pkg
 dpkg-deb -Zgzip --root-owner-group --build _pkg 
 ar r _pkg.deb _aegis
 mv _pkg.deb ../chrony.deb
